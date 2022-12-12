@@ -134,8 +134,11 @@ export default {
   data() {
     return {
       listdata: [],
+      listdata2: [],
       data: "상준",
-      result: "25"
+      result: "25",
+      page: 2,
+      kw:""
     };
   },
   mounted: function() {
@@ -165,7 +168,27 @@ export default {
     // 근데 만약에 이 마운트해야할 함수들이 존나게많다? 그럼어떻게하느냐
     // vm.fninit(); 이런식으로 계단처럼 정리하는거야 ㅇㅋ? 아아 ㅇㅋ 그럼 깔끔하게 페이지가 마운트될떄 뭐뭐시작하는지 니가 한눈에볼수잇음 주석으로 이게뭔지도 깔끔하게 적을수도있고
     // 근데이건 케바케라 니가하고싶은대로하면됨ㅇㅋ? ㄴㄴ 이거 좋아보임 ㅇㅇ
-    vm.fetchContacts();
+    // vm.fetchContacts();
+    Axios.get("/question", {
+        params: {
+          kw: vm.kw,
+          page: vm.page
+        }
+      })
+        .then(function(response) {
+          vm.listdata = response.data.content;
+          console.log(response.data);
+          for (var i = 0; i < vm.listdata.length; i++) {
+            console.log(vm.listdata[i].content);
+          }
+        })
+        .catch(function(ex) {
+          console.log(ex);
+          console.log("여긴 catch");
+        })
+        .finally(function() {
+          console.log("=====================끝남======================");
+        });
   },
   //정리되면 쓸데없는거 주석이고뭐고 싹지워버려 ㅇㅋ?
   methods: {
@@ -191,19 +214,67 @@ export default {
       // this ~다수 많이 한개이상
       let vm = this;
 
-      let sendData = {};
-
-      Axios.get("/question/api/list3", sendData)
+      let sendData = {
+          page: vm.page,
+          kw: vm.kw,
+      };
+      let url = '/question'
+      console.log('test');
+      Axios.get(url, sendData)
         .then(function(response) {
-          vm.listdata = response.data.content;
-          for (var i = 0; i < vm.listdata.length; i++) {
-            console.log(vm.listdata[i].content);
-          }
+          console.log(response);
+          vm.listdata = response.data;
+          console.log(vm.listdata)
+          // for (var i = 0; i < vm.listdata.length; i++) {
+          //   console.log(vm.listdata[i].content);
+          // }
+          // 유알엘 까진 타는데 이후에 값을 안받아 오네 ?;; ? 
         })
         .catch(function(ex) {
           console.log(ex);
         });
     },
+    //     fetchContacts: function() {
+    //   // this ~다수 많이 한개이상
+    //   let vm = this;
+
+    //   let sendData = {
+    //       page:0,
+    //       kw:""
+    //   };
+    //   let url = '/question'
+    //   console.log('test');
+    //   Axios.get(url)
+    //     .then(function(response, sendData) {
+    //       console.log(response);
+    //       vm.listdata = response.data;
+    //       console.log(vm.listdata)
+    //       // for (var i = 0; i < vm.listdata.length; i++) {
+    //       //   console.log(vm.listdata[i].content);
+    //       // }
+    //       // 유알엘 까진 타는데 이후에 값을 안받아 오네 ?;; ? 
+    //     })
+    //     .catch(function(ex) {
+    //       console.log(ex);
+    //     });
+    // },
+    // fetchContacts: function() {
+    //   // this ~다수 많이 한개이상
+    //   let vm = this;
+
+    //   let sendData = {};
+
+    //   Axios.get("/question/api/list3", sendData)
+    //     .then(function(response) {
+    //       vm.listdata = response.data.content;
+    //       for (var i = 0; i < vm.listdata.length; i++) {
+    //         console.log(vm.listdata[i].content);
+    //       }
+    //     })
+    //     .catch(function(ex) {
+    //       console.log(ex);
+    //     });
+    // },
 
     fnMoveToDetail: function(id) {
       // location.href="/community/faq/View";

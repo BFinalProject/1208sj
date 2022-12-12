@@ -26,11 +26,15 @@ module.exports = {
         // }
         proxy:{
           "/question": {
-            "target": "http://localhost:8080",
+            "target": "http://localhost:8090",
             "secure": false
           },
           "/answer": {
-            "target": "http://localhost:8080",
+            "target": "http://localhost:8090",
+            "secure": false
+          },
+          "/map": {
+            "target": "http://localhost:8090",
             "secure": false
           }
         }

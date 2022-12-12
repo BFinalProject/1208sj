@@ -114,7 +114,7 @@
               type="button"
               class="button1"
               style="margin-bottom: 10px"
-              onclick="location.href='main2'"
+              onclick="location.href='#'"
               @click="userlogin()"
             >
               로그인
@@ -157,7 +157,7 @@ body {
 </style>
 <script>
 import NavHeader from "../views/NavHeader.vue";
-
+import Axios from "axios";
 export default {
   data: function() {
     return {
@@ -277,11 +277,11 @@ export default {
       console.log(vm.user_pw);
 
       let send = {
-        userid: vm.user_id,
-        userpw: vm.user_pw
+        username:vm.user_id,
+        password:vm.user_pw
       };
 
-      let url = "/user/login";
+      let url = "/user/login_process";
 
       console.log(url);
 

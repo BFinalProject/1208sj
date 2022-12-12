@@ -1,45 +1,18 @@
 <template>
-  <div>
+  <div v-cloak>
     <div v-if="onclick == true">
       <!-- <div v-show="onclick"><kakaomaporder/></div> -->
-      <button
-        class="btn btn-warning"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling"
-        style="position: absolute; z-index: 2;"
-      >
+      <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling" style="position: absolute; z-index: 2;">
         카테고리
       </button>
 
-      <div
-        class="offcanvas offcanvas-start show"
-        data-b
-        bs-scroll="true"
-        data-bs-backdrop="false"
-        tabindex="-1"
-        id="offcanvasScrolling"
-        aria-labelledby="offcanvasScrollingLabel"
-      >
-        <div
-          class="offcanvas-header"
-          display="flex"
-          text-align="center"
-          style="background-color: #113f89;"
-        >
-          <img
-            src="../../mainboard/images/logo2.png"
-            style="cursor: pointer;"
-            onclick="location.href='/'"
-          />
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-            style="margin-right: 1rem;"
-          ></button>
+      <div class="offcanvas offcanvas-start show" data-b bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header" display="flex" text-align="center" style="background-color: #113f89;">
+          <img src="../../mainboard/images/logo2.png" style="cursor: pointer;" onclick="location.href='/'" />
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+            style="margin-right: 1rem;"></button>
         </div>
         <div class="offcanvas-header" display="flex">
           <div>
@@ -49,263 +22,111 @@
           </div>
         </div>
         <!-- 1 -->
-        <div
-          style="border-bottom: solid 5px #f56a6a; border-top: solid 5px #f56a6a"
-        >
+        <div style="border-bottom: solid 5px #f56a6a; border-top: solid 5px #f56a6a">
           <br />
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option1"
-            autocomplete="off"
-            value="한식"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option1" autocomplete="off" value="한식"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option1">한식</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option2"
-            autocomplete="off"
-            value="중식"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option2" autocomplete="off" value="중식"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option2">중식</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option3"
-            autocomplete="off"
-            value="양식"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option3" autocomplete="off" value="양식"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option3">양식</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option4"
-            autocomplete="off"
-            value="일식"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option4" autocomplete="off" value="일식"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option4">일식</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option5"
-            autocomplete="off"
-            value="기타음식"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option5" autocomplete="off" value="기타음식"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option5">기타음식</label>
 
           <br />
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option6"
-            autocomplete="off"
-            value="술집"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option6" autocomplete="off" value="술집"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option6">술집</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option7"
-            autocomplete="off"
-            value="맛집"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option7" autocomplete="off" value="맛집"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option7">맛집</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option8"
-            autocomplete="off"
-            value="기념일"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option8" autocomplete="off" value="기념일"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option8">기념일</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option9"
-            autocomplete="off"
-            value="가성비"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option9" autocomplete="off" value="가성비"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option9">가성비</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option10"
-            autocomplete="off"
-            value="뷰"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option10" autocomplete="off" value="뷰"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option10">뷰</label>
           <br />
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option11"
-            autocomplete="off"
-            value="가족"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option11" autocomplete="off" value="가족"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option11">가족</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option12"
-            autocomplete="off"
-            value="애견동반"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option12" autocomplete="off" value="애견동반"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option12">애견동반</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option13"
-            autocomplete="off"
-            value="색다른"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option13" autocomplete="off" value="색다른"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option13">색다른</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option14"
-            autocomplete="off"
-            value="청결"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option14" autocomplete="off" value="청결"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option14">청결</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option15"
-            autocomplete="off"
-            value="시끌벅적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option15" autocomplete="off" value="시끌벅적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option15">시끌벅적</label>
           <br />
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option16"
-            autocomplete="off"
-            value="한적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option16" autocomplete="off" value="한적"
+            v-model="checkedemotion" />
 
           <label class="btn btn-outline-primary" for="option16">한적</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option17"
-            autocomplete="off"
-            value="활동적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option17" autocomplete="off" value="활동적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option17">활동적</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option18"
-            autocomplete="off"
-            value="고급스런"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option18" autocomplete="off" value="고급스런"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option18">고급스런</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option19"
-            autocomplete="off"
-            value="감성적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option19" autocomplete="off" value="감성적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option19">감성적</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option20"
-            autocomplete="off"
-            value="이국적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option20" autocomplete="off" value="이국적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option20">이국적</label>
           <br />
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option21"
-            autocomplete="off"
-            value="편리한"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option21" autocomplete="off" value="편리한"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option21">편리한</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option22"
-            autocomplete="off"
-            value="전통적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option22" autocomplete="off" value="전통적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option22">전통적</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option23"
-            autocomplete="off"
-            value="모던한"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option23" autocomplete="off" value="모던한"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option23">모던한</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option24"
-            autocomplete="off"
-            value="편안한"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option24" autocomplete="off" value="편안한"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option24">편안한</label>
 
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="option25"
-            autocomplete="off"
-            value="이색적"
-            v-model="checkedemotion"
-          />
+          <input type="checkbox" class="btn-check" id="option25" autocomplete="off" value="이색적"
+            v-model="checkedemotion" />
           <label class="btn btn-outline-primary" for="option25">이색적</label>
           <br />
           <br />
@@ -314,62 +135,32 @@
           </div>
         </div>
         <div style="margin-top: 20px;">
+          <img src="/vue-controller/map2.jpg?6d54c88ca843a9ac2ec8bbcd5320031c"
+            style="width: 100%;position: absolute;bottom: 0px;left: 0px;z-index: -9;height: 35%;">
           <button
             style="background-color:#113f89; border-radius: 5px; color: #ffc303; width: 100px; height: 50px; border-color: #113f89;"
-            @click="Overlaydata()"
-          >
+            @click="Overlaydata()">
             선택완료
           </button>
         </div>
-        <div>
-          <img
-            src="../../mainboard/images/map2.jpg"
-            style="width:100%; position:absolute; bottom: 0; left: 0;"
-          />
-        </div>
+
       </div>
     </div>
     <!-- ------------------   order -------------------------------------------------------------------------------- -->
 
     <!-- <div v-if= "onclick == false"> -->
     <div v-if="onclick == false">
-      <button
-        class="btn btn-warning"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling"
-        style="position: absolute; z-index: 2;"
-      >
+      <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling" style="position: absolute; z-index: 2;">
         추천장소
       </button>
 
-      <div
-        class="offcanvas offcanvas-start show"
-        data-bs-scroll="true"
-        data-bs-backdrop="false"
-        tabindex="-1"
-        id="offcanvasScrolling"
-        aria-labelledby="offcanvasScrollingLabel"
-      >
-        <div
-          class="offcanvas-header"
-          display="flex"
-          text-align="center"
-          style="background-color: #113f89;"
-        >
-          <img
-            src="../../mainboard/images/logo2.png"
-            style="cursor: pointer;"
-            onclick="location.href='/'"
-          />
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-            style="margin-right: 1rem;"
-          ></button>
+      <div class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header" display="flex" text-align="center" style="background-color: #113f89;">
+          <img src="../../mainboard/images/logo2.png" style="cursor: pointer;" onclick="location.href='/'" />
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+            style="margin-right: 1rem;"></button>
         </div>
         <div class="offcanvas-header" display="flex" text-align="center">
           <h4 class="offcanvas-title" id="offcanvasScrollingLabel">
@@ -377,32 +168,35 @@
           </h4>
         </div>
         <!-- 1 -->
-        <div
-          style="border-bottom: solid 5px #f56a6a; border-top: solid 5px #f56a6a"
-        >
+        <div style="border-bottom: solid 5px #f56a6a; border-top: solid 5px #f56a6a">
           <div class="row">
             <div class="col-md-12">
-              <div id="accordion" class="checkout">
-                <div
-                  class="panel checkout-step"
-                  style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom:0;"
-                  draggable="true"
-                >
+
+              <draggable v-model="selectlist" group="people" @start="drag=true" @end="drag=false" @change="chageevent()">
+                <div v-for="element in selectlist" :key="element.id" >{{element.name}}</div>
+              </draggable>
+           
+
+
+
+
+
+
+
+
+
+              <!-- <div id="accordion" class="checkout">
+
+                <div class="panel" style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom:0;" draggable="true">
                   <div>
                     <span class="checkout-step-number">1</span>
                     <h4 class="checkout-step-title">
-                      <a
-                        role="button"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseOne"
-                      >
-                        식당 므삐동</a
-                      >
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">식당 므삐동</a>
                     </h4>
                   </div>
                   <div id="collapseOne" class="collapse in"></div>
                 </div>
+
                 <div class="panel" style="margin-bottom: 0;">
                   <div
                     role="tab"
@@ -424,6 +218,7 @@
                     </h4>
                   </div>
                 </div>
+
                 <div class="panel" style="margin-bottom: 0;">
                   <div
                     role="tab"
@@ -487,22 +282,18 @@
                     </h4>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
         <div style="margin-top: 10px;">
           <button
             style="background-color:#113f89; border-radius: 5px; color: #ffc303; width: 100px; height: 50px; border-color: #113f89;"
-            @click="hideMarkers3()"
-          >
+            @click="hideMarkers3()">
             다시 선택
           </button>
           <div>
-            <img
-              src="../../mainboard/images/map3.jpg"
-              style="width:100%; position:absolute; bottom: 0; left: 0;"
-            />
+            <img src="../../mainboard/images/map3.jpg" style="width:100%; position:absolute; bottom: 0; left: 0;" />
           </div>
         </div>
       </div>
@@ -514,16 +305,26 @@
 
 <script>
 import Axios from "axios";
+import draggable from 'vuedraggable'
 import kakaomaporder from "../../kakaomapview/kakaomaporder.vue";
 import $ from "jquery";
 export default {
   name: "kakaomaps",
-  el: "#sel",
+  el: '#it_list',
   components: {
-    kakaomaporder
+    kakaomaporder,
+    draggable
   },
   data() {
-    return {
+    return {    
+
+      selectlist: [
+        { x: 37.55934312564639, y: 126.9254105034978, name: "미쁘동", id : "mine"},
+        { x: 37.55540969039115, y: 126.91946112059084, name: "율곡",id : "it" },
+        { x: 37.5524844, y: 126.9189927, name: "플렉스라운지",id : "record" },
+        { x: 37.5543874, y: 126.9219519, name: "볼더프렌즈",id : "etes" },
+        { x: 37.5503985, y: 126.920374, name: "스테이크슈퍼",id : "sadf" }
+      ],
       datas: [],
       mapOption: {},
       map: [],
@@ -536,18 +337,22 @@ export default {
       markerPosition: [],
       markeris: [],
       polyline: [],
-      viewModel:{
+      viewModel: {
         latitude: '',
         longitude: '',
-        textContent: ''
+        textContent: '',
+        test:[]
       }
     };
   },
-
+  // watch(){
+  //   myArray
+  // },
   mounted() {
     let vm = this;
     vm.tests2();
-
+    vm.fnGetSelectList();
+    // vm.test3();
     vm.clusterer = new kakao.maps.MarkerClusterer({
       map: vm.map,
       markers: null,
@@ -568,24 +373,51 @@ export default {
     });
   },
   methods: {
-    Overlaydata: function() {
+    chageevent: function(){
+      let vm= this;
+      $(".customoverlay")
+        .parent()
+        .empty();
+      $(
+        "img[src='https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png']"
+      )
+        .parent()
+        .empty();
+      $("path[id*='daum-maps-shape-']")
+        .parent()
+        .empty();
+      vm.Overlaydata();
+    },
+
+    fnGetSelectList: function() {
+      let vm = this;
+      let senddata = {
+          
+      }
+      let url = "/map/maps";
+
+
+      Axios.get(url, senddata)
+        .then(function(response) {
+          vm.test = response.data;
+          console.log(response.data)
+        })
+        .catch(function(ex) {
+          console.log(ex);
+        });
+    },
+
+    Overlaydata: function () {
       let vm = this;
 
       vm.map.relayout();
-      let data = [
-        { x: 37.55934312564639, y: 126.9254105034978, ser: "미쁘동" },
-        { x: 37.55540969039115, y: 126.91946112059084, ser: "율곡" },
-        { x: 37.5524844, y: 126.9189927, ser: "플렉스라운지" },
-        { x: 37.5543874, y: 126.9219519, ser: "볼더프렌즈" },
-        { x: 37.5503985, y: 126.920374, ser: "스테이크슈퍼" }
-      ];
-
+      let data = vm.selectlist;
       (vm.datas = []), (vm.markeris = data), (vm.checkedemotion = []);
       console.log(vm.markeris);
       // let imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다
       // let imageSrc ="../design/markerimges/img1.png", // 마커이미지의 주소입니다
       let imageSrc =
-          "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png", // 마커이미지의 주소입니다
+        "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png", // 마커이미지의 주소입니다
         imageSize = new kakao.maps.Size(50, 55), // 마커이미지의 크기입니다
         imageOption = { offset: new kakao.maps.Point(21, 50) };
       // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -625,7 +457,7 @@ export default {
           `<div class= 'customoverlay'>` +
           '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
           '    <span class="title"> ' +
-          element.ser +
+          element.name +
           "</span>" +
           "  </a>" +
           "</div>";
@@ -660,59 +492,9 @@ export default {
       console.log(vm.onclick);
       // this.onclick = !this.onclick;
     },
-    tests2:function(){
-      let vm =this;
-      
-      function success({ coords, timestamp }) {
-          let latitude = coords.latitude;   // 위도
-          let longitude = coords.longitude; // 경도
-          vm.viewModel.latitude = latitude;
-          vm.viewModel.longitude = longitude;
-          console.log(vm.viewModel.latitude)
-          console.log(vm.viewModel.longitude)
-
-          let mapContainer = document.getElementById("map");
-          if(longitude != null || longitude != ''){
-            vm.mapOption = {
-            //지도를 생성할 때 필요한 기본 옵션
-            center: new kakao.maps.LatLng(latitude, longitude) //지도의 중심좌표.
-            // center: new kakao.maps.LatLng(33.450701, 126.570667) //지도의 중심좌표. 이게 제주도 좌표야
-            //level: 7 //지도의 레벨(확대, 축소 정도)
-          };
-          vm.map = new kakao.maps.Map(mapContainer, vm.mapOption);
-          }else if(longitude.length == 0){
-            vm.mapOption = {
-            //지도를 생성할 때 필요한 기본 옵션
-            // center: new kakao.maps.LatLng(latitude, longitude) //지도의 중심좌표.
-            center: new kakao.maps.LatLng(33.450701, 126.570667) //지도의 중심좌표. 이게 제주도 좌표야
-            //level: 7 //지도의 레벨(확대, 축소 정도)
-          };
-          vm.map = new kakao.maps.Map(mapContainer, vm.mapOption);
-          }
-
-          // alert(`위도: ${latitude}, 경도: ${longitude}, 위치 반환 시간: ${timestamp}`);
-      }
-
-      function getUserLocation() {
-        console.log(navigator.geolocation);
-        if (navigator.geolocation) {
-          if(navigator.geolocation != null){
-            navigator.geolocation.getCurrentPosition (success) 
-          }else {
-            alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
-          }
-        } else {
-            alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
-          }
-  
-      }
-
-      getUserLocation();
-
-    }, 
     // tests2:function(){
     //   let vm =this;
-      
+
     //   function success({ coords, timestamp }) {
     //       let latitude = coords.latitude;   // 위도
     //       let longitude = coords.longitude; // 경도
@@ -754,14 +536,64 @@ export default {
     //     } else {
     //         alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
     //       }
-  
+
     //   }
 
     //   getUserLocation();
 
-    // },
+    // }, 
+    tests2: function () {
+      let vm = this;
 
-    hideMarkers3: function() {
+      function success({ coords, timestamp }) {
+        let latitude = coords.latitude;   // 위도
+        let longitude = coords.longitude; // 경도
+        vm.viewModel.latitude = latitude;
+        vm.viewModel.longitude = longitude;
+        console.log(vm.viewModel.latitude)
+        console.log(vm.viewModel.longitude)
+
+        let mapContainer = document.getElementById("map");
+        if (longitude != null || longitude != '') {
+          vm.mapOption = {
+            //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(latitude, longitude) //지도의 중심좌표.
+            // center: new kakao.maps.LatLng(33.450701, 126.570667) //지도의 중심좌표. 이게 제주도 좌표야
+            //level: 7 //지도의 레벨(확대, 축소 정도)
+          };
+          vm.map = new kakao.maps.Map(mapContainer, vm.mapOption);
+        } else if (longitude.length == 0) {
+          vm.mapOption = {
+            //지도를 생성할 때 필요한 기본 옵션
+            // center: new kakao.maps.LatLng(latitude, longitude) //지도의 중심좌표.
+            center: new kakao.maps.LatLng(33.450701, 126.570667) //지도의 중심좌표. 이게 제주도 좌표야
+            //level: 7 //지도의 레벨(확대, 축소 정도)
+          };
+          vm.map = new kakao.maps.Map(mapContainer, vm.mapOption);
+        }
+
+        // alert(`위도: ${latitude}, 경도: ${longitude}, 위치 반환 시간: ${timestamp}`);
+      }
+
+      function getUserLocation() {
+        console.log(navigator.geolocation);
+        if (navigator.geolocation) {
+          if (navigator.geolocation != null) {
+            navigator.geolocation.getCurrentPosition(success)
+          } else {
+            alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
+          }
+        } else {
+          alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
+        }
+
+      }
+
+      getUserLocation();
+
+    },
+
+    hideMarkers3: function () {
       let vm = this;
       console.log(vm.onclick);
 
@@ -807,9 +639,7 @@ export default {
   font-weight: bold;
   overflow: hidden;
   background: #d95050;
-  background: #d95050
-    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
-    no-repeat right 14px center;
+  background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
 }
 
 .customoverlay .title {
@@ -884,9 +714,52 @@ label,
 span {
   font-family: "Do Hyeon", sans-serif;
 }
+
 .btn {
   height: 50px;
   width: 90px;
   text-align: justify;
 }
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.responsive-table {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  white-space:nowrap;
+}
+
+table th {
+  background: #BDBDBD;
+}
+
+table tr:nth-child(odd) {
+  background-color: #F2F2F2;
+}
+table tr:nth-child(even) {
+  background-color: #E6E6E6;
+}
+
+th, tr, td {
+  text-align: center;
+  border: 1px solid #E0E0E0;
+  padding: 5px;
+}
+
+img {
+  font-style: italic;
+  font-size: 11px;
+}
+
+.fa-bars{
+  cursor: move;
+}
+
 </style>
